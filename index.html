@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kredivo - Digital Financial Services</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Registration Form -->
+        <div class="form-container" id="registrationForm">
+            <button type="button" class="back-btn">←</button>
+            <h1>Daftar Akun Kredivo</h1>
+            <form>
+                <div class="form-section">
+                    <h2>Data Pribadi</h2>
+                    <input type="text" name="nama_lengkap" placeholder="Nama Lengkap" required autocomplete="name">
+                    <input type="text" name="nomor_ktp" placeholder="Nomor KTP" required pattern="[0-9]{16}">
+                    <textarea name="alamat" placeholder="Alamat Lengkap" required></textarea>
+                    <input type="text" name="npwp" placeholder="NPWP (Opsional)" pattern="[0-9]{15}">
+                </div>
+
+                <div class="form-section">
+                    <h2>Informasi Finansial</h2>
+                    <select name="penghasilan" required>
+                        <option value="">Pilih Range Penghasilan</option>
+                        <option value="3-5">Rp 3.000.000 - Rp 5.000.000</option>
+                        <option value="5-10">Rp 5.000.000 - Rp 10.000.000</option>
+                        <option value="10+">Lebih dari Rp 10.000.000</option>
+                    </select>
+                    <input type="email" name="email" placeholder="Email" required autocomplete="email">
+                    <input type="password" name="password" placeholder="Password" required autocomplete="new-password">
+                    <input type="text" name="nama_ibu" placeholder="Nama Ibu Kandung" required>
+                </div>
+
+                <button type="submit" class="primary-btn">Daftar Sekarang</button>
+            </form>
+
+            <p class="switch-text">
+                Sudah punya akun? <a href="#" class="switch-form" data-form="login">Masuk</a>
+            </p>
+        </div>
+
+        <!-- Login Form -->
+        <div class="form-container" id="loginForm">
+            <button type="button" class="back-btn">←</button>
+            <h1>Selamat Datang Kembali</h1>
+            <form>
+                <div class="input-group">
+                    <input type="email" name="email" placeholder="Email" required autocomplete="email">
+                    <input type="password" name="password" placeholder="Password" required autocomplete="current-password">
+                    <button type="submit" class="primary-btn">Masuk</button>
+                </div>
+                <a href="#" class="forgot-password">Lupa Password?</a>
+            </form>
+            <p class="switch-text">
+                Belum punya akun? <a href="#" class="switch-form" data-form="registration">Daftar</a>
+            </p>
+        </div>
+
+        <!-- Dashboard -->
+        <div class="dashboard" id="dashboard">
+            <header class="dashboard-header">
+                <h1>Dashboard Kredivo</h1>
+                <button type="button" class="logout-btn">Keluar</button>
+            </header>
+
+            <div class="dashboard-content">
+                <div class="credit-info">
+                    <h2>Limit Kredit Anda</h2>
+                    <div class="credit-amount">Rp 8.000.000</div>
+                    <div class="credit-status">Tersedia</div>
+                </div>
+
+                <div class="loan-options">
+                    <h2>Pilihan Pinjaman</h2>
+                    <div class="loan-cards">
+                        <div class="loan-card">
+                            <h3>Pinjaman Tunai</h3>
+                            <p>Pinjaman tunai instant hingga 30 juta</p>
+                            <button type="button" class="secondary-btn">Ajukan Sekarang</button>
+                        </div>
+                        <div class="loan-card">
+                            <h3>Cicilan</h3>
+                            <p>Cicilan 0% untuk berbagai merchant</p>
+                            <button type="button" class="secondary-btn">Lihat Merchant</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
